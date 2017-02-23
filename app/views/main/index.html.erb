@@ -1,0 +1,34 @@
+<center>
+  <h4>Latest Fuel Price</h4>
+  <%= select_tag 'city_name', options_for_select(City.city_list) %>
+  <%= select_tag 'fuel_type', options_for_select(["Petrol", "Diesel"]) %>
+  <br>
+  <br>
+  <br>
+  <button class="btn btn-default" id="submit" onclick="fetchVal()">Fetch Price</button>
+  <br>
+  <br>
+  <br>
+  <h5><p id="result"></h5>
+</center>
+
+<script>
+function fetchVal() {
+  $("#result").text("Fetching latest value for you...");
+  jsonData = {};
+  jsonData['city'] = $('#city_name').val();
+  jsonData['fuelType'] = $('#fuel_type').val();
+  $.ajax({
+    type: "POST",
+    dataType: "JSON",
+    data: jsonData,
+    url: "main/fetch_fuel_price_with_msg",
+    success: function(data){
+      // alert(data['val']);
+      $("#result").text(data['val'] + "\n");
+      // $('#result').val(objectStr);
+    }
+  });
+}
+
+</script>
