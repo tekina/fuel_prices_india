@@ -19,14 +19,12 @@ url: `http://fuelpriceindia.herokuapp.com`
   
 2. Fetch fuel price for a city:
 
-   `POST /main/fetch_fuel_price`
-   
-   payload: `{ city: {city_name}, fuelType: {fuelType} }`
+   `GET /main/{city_name}/{fuel_type}/price`
    
    a. `city_name` can be any city from the list obtained in the `GET city_list` API call.
    
-   b. `fuelType`: `Petrol` or `Diesel`
+   b. `fuelType`: `petrol` or `diesel`
    
-    sample payload: `{ city: "Mumbai" , fuelType: Petrol }`
+    Sample endpoint: `GET /main/mumbai/petrol/price`
     
     response: `{ city: {city_name}, price: {fuel_price} }`
