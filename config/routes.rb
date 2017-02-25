@@ -5,9 +5,8 @@ Rails.application.routes.draw do
   namespace :main do
     get 'index'
     get 'city_list'
-    post 'fetch_fuel_price'
-    post 'fetch_fuel_price_with_msg'
   end
 
+  get '/main/:city/:fuel_type/price' => 'main#price'
 
 end
