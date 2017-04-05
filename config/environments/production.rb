@@ -52,10 +52,10 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  if Rails.root.join('tmp/caching-dev.txt').exist?
+  if ENV['REDIS_URL']
     config.action_controller.perform_caching = true
     # using memory store, since we are only caching small data
-    config.cache_store = :memory_store, { size: 2.megabytes }
+    config.cache_store = :redis_store, { size: 2.megabytes }
     config.public_file_server.headers = {
       'Cache-Control' => 'public, max-age=172800'
     }
