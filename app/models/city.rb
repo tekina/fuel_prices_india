@@ -11,7 +11,9 @@ class City
   def self.fetch_price(city_name, fuel_type)
     code = city_code(city_name)
     return nil if code.nil?
-    return FuelPriceScraper.get_fuel_price(city_name, code, fuel_type)
+    Rails.cache.fetch("fuel_price_#{code}_#{fuel_type}", expires_in: 2.days) do
+      FuelPriceScraper.get_fuel_price(city_name, code, fuel_type)
+    end
   end
 
   private
