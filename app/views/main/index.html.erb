@@ -1,7 +1,7 @@
 <center>
   <h4>Latest Fuel Price</h4>
   <%= select_tag 'city_name', options_for_select(City.city_list) %>
-  <%= select_tag 'fuelType', options_for_select(["Petrol", "Diesel"]) %>
+  <%= select_tag 'fuelType', options_for_select(["Petrol", "Diesel", "CNG"]) %>
   <br>
   <br>
   <br>
@@ -22,11 +22,16 @@ function fetchVal() {
     type: "GET",
     dataType: "JSON",
     data: jsonData,
-    url: "main/" + city + "/" + fuelType + "/price",
+    url: "price?city=" + city + "&fuel_type=" + fuelType,
     success: function(data){
-      // alert(data['val']);
-      $("#result").text("Latest " + fuelType + " price for " + data['city'] + " is Rs. " + data['price']);
-      // $('#result').val(objectStr);
+      if(data[fuelType] == null){
+        $("#result").text("Data not available at this time.");
+      } else {
+        $("#result").text("Latest " + fuelType + " price for " + data['city'] + " is Rs. " + data[fuelType]);
+      }
+    },
+    error: function(data){
+      $("#result").text("Data not available at this time.");
     }
   });
 }
