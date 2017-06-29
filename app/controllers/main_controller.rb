@@ -7,6 +7,7 @@ class MainController < ApplicationController
     render layout: 'application'
   end
 
+  # GET /price
   def price
     city = params[:city]
     fuel_type = params[:fuel_type]
@@ -15,10 +16,12 @@ class MainController < ApplicationController
     render json: response.merge!(price)
   end
 
+  # GET /cities
   def city_list
     render json: { cities: City.city_list }
   end
 
+  # GET /fuel_types
   def fuel_types
     render json: {fuel_types: Fuel::TYPE.values}
   end
@@ -31,7 +34,7 @@ class MainController < ApplicationController
   end
 
   def validate_city
-    return City.valid?(City.qualified_name(params['city'].to_s))
+    return City.valid?(City.qualified_name(params[:city].to_s))
   end
 
 end

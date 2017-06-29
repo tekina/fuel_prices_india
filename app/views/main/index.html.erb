@@ -1,7 +1,7 @@
 <center>
   <h4>Latest Fuel Price</h4>
   <%= select_tag 'city_name', options_for_select(City.city_list) %>
-  <%= select_tag 'fuelType', options_for_select(["Petrol", "Diesel", "CNG"]) %>
+  <%= select_tag 'fuelType', options_for_select(Fuel::TYPE.values) %>
   <br>
   <br>
   <br>
