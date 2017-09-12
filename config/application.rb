@@ -12,6 +12,11 @@ module FuelPricesIndia
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     # config.assets.precompile += %w( application.css application.js )
+
+    # local time in app, but store data in DB in UTC
+    config.time_zone = 'Kolkata'
+    config.active_record.default_timezone = :utc
+
     config.autoload_paths << "#{Rails.root}/lib"
   end
 end
