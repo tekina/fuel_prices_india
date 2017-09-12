@@ -49,7 +49,7 @@ class City
   class << self
 
     def list
-      ["New Delhi", "Kolkata", "Mumbai", "Chennai", "Faridabad", "Gurgaon", "Noida", "Ghaziabad", "Agartala", "Aizwal", "Ambala", "Bangalore", "Bhopal", "Bhubhaneswar", "Chandigarh", "Dehradun", "Gandhinagar", "Gangtok", "Guwahati", "Hyderabad", "Imphal", "Itanagar", "Jaipur", "Jammu", "Jullunder", "Kohima", "Lucknow", "Panjim", "Patna", "Pondichery", "Port Blair", "Raipur", "Ranchi", "Shillong", "Shimla", "Srinagar", "Trivandrum", "Silvasa", "Daman"]
+      ["Delhi", "Kolkata", "Mumbai", "Chennai", "Faridabad", "Gurgaon", "Noida", "Ghaziabad", "Agartala", "Aizwal", "Ambala", "Bangalore", "Bhopal", "Bhubhaneswar", "Chandigarh", "Dehradun", "Gandhinagar", "Gangtok", "Guwahati", "Hyderabad", "Imphal", "Itanagar", "Jaipur", "Jammu", "Jullunder", "Kohima", "Lucknow", "Panjim", "Patna", "Pondichery", "Port Blair", "Raipur", "Ranchi", "Shillong", "Shimla", "Srinagar", "Trivandrum", "Silvasa", "Daman"]
     end
 
   end
