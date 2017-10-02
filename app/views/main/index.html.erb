@@ -1,17 +1,17 @@
 <center>
-  <h4>Latest Fuel Price</h4>
-  <%= select_tag 'city_name', options_for_select(City.city_list) %>
-  <%= select_tag 'fuelType', options_for_select(["Petrol", "Diesel"]) %>
-  <br>
-  <br>
-  <br>
-  <button class="btn btn-default" id="submit" onclick="fetchVal()">Fetch Price</button>
-  <br>
-  <br>
-  <br>
-  <h5><p id="result"></h5>
-</center>
 
+  <h4>Latest Fuel Price India</h4>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  <%= select_tag 'city_name', options_for_select(City.city_list), {:class => 'mdl-textfield__input'} %>
+  <br>
+  <%= select_tag 'fuelType', options_for_select(["Petrol", "Diesel"]) , {:class => 'mdl-textfield__input'} %>
+</div>
+<h3 id="result">
+
+  <br>
+  <h1><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit" onclick="fetchVal()">Fetch Price</button></h2>
+
+</center>
 <script>
 function fetchVal() {
   $("#result").text("Fetching latest value for you...");
@@ -25,7 +25,7 @@ function fetchVal() {
     url: "main/" + city + "/" + fuelType + "/price",
     success: function(data){
       // alert(data['val']);
-      $("#result").text("Latest " + fuelType + " price for " + data['city'] + " is Rs. " + data['price']);
+      $("#result").text("Latest " + fuelType + " price for " + data['city'] + " is ₹ " + data['price']);
       // $('#result').val(objectStr);
     }
   });
