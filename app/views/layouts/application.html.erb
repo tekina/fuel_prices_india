@@ -28,6 +28,109 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+	  .site-footer  {
+	font-size: 12px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+        button.mdl-button {
+      margin: 50px;
+      font-size: 20px;
+     width: 8em;
+      height: 3em;
+    }
+            /*SELECT ELEMENT WITH UNICODE SYMBOL: DOWN-ARROW (&#x25bc;)*/
+            select#city_name, select#fuelType
+            {
+               width                    : 185pt;
+               height                   : 40pt;
+               line-height              : 40pt;
+               padding-right            : 0pt;
+               text-indent              : 4pt;
+               text-align               : center;
+               vertical-align           : middle;
+               box-shadow               : inset 0 0 3px #606060;
+               border                   : 1px solid #acacac;
+               -moz-border-radius       : 6px;
+               -webkit-border-radius    : 6px;
+               border-radius            : 6px;
+               -webkit-appearance       : none;
+               -moz-appearance          : none;
+               appearance               : none;  /*IMPORTANT*/
+               font-family              : Arial,  Calibri, Tahoma, Verdana;
+               font-size                : 18pt;
+               font-weight              : 500;
+               color                    : #F44336;
+               cursor                   : pointer;
+               outline                  : none;
+            }
+            select#city_name::-ms-expand {display: none;} /*FOR IE*/
+            select#city_name option
+            {
+                padding             : 4px 10px 4px 10px;
+                font-size           : 11pt;
+                font-weight         : normal;
+            }
+            select#city_name option[selected]{ font-weight:bold}
+            select#city_name option:nth-child(even) { background-color:#f5f5f5; }
+            select#city_name:hover {font-weight: 700;}
+            select#city_name:focus {box-shadow: inset 0 0 5px #000099; font-weight: 600;}
+
+            /*LABEL FOR SELECT*/
+            label#lblSelect{ position: relative; display: inline-block;}
+            /*DOWNWARD ARROW (25bc)*/
+            label#lblSelect::after
+            {
+                content                 : "\25bc";
+                position                : absolute;
+                top                     : 0;
+                right                   : 0;
+                bottom                  : 0;
+                width                   : 20pt;
+                line-height             : 40pt;
+                vertical-align          : middle;
+                text-align              : center;
+                background              : #000099;
+                color                   : #fefefe;
+               -moz-border-radius       : 0 6px 6px 0;
+               -webkit-border-radius    : 0 6px 6px 0;
+                border-radius           : 0 6px 6px 0;
+                pointer-events          : none;
+            }
+
+            img
+  {
+    width:100px;
+  }
+
+span
+  {
+  color: #666
+  font-size: 12px
+  display: block
+  position: absolute
+  bottom: 10px
+  position: absolute
+  width: 90%
+  left: 50%
+  top: 45%
+  bottom: auto
+  right: auto
+  transform: translateX(-50%) translateY(-50%)
+  text-align: center
+  }
+
+  .fa
+    {
+    color: #E90606
+    margin: 0 3px
+    font-size: 10px
+    animation: pound .35s infinite alternate
+    -webkit-animation: pound .35s infinite
+  }
+        </style>
 
         
   </head>
