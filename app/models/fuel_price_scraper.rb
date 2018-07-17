@@ -9,7 +9,7 @@ class FuelPriceScraper
       if response_html.success?
         puts "Successfully fetched #{fuel_type} price for #{city}"
         parsed_page = Nokogiri::HTML(response_html)
-        return parsed_page.at_css('[class="price"]').children.to_s.strip.delete("^.0-9").to_f.round(2)
+        return parsed_page.at_css('[class="UCPrice"]').children.to_s.strip.delete("^.0-9").to_f.round(2)
       else
         raise HTTParty::Error("Received a non 200 response")
       end
