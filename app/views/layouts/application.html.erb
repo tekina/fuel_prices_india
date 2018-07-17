@@ -1,17 +1,180 @@
 <!DOCTYPE html>
 <html>
+
+<!-- Petrol, Diesel, Price -->
   <head>
-    <title>FuelPricesIndia</title>
+
+    <meta name="description" content="Get the Latest Petrol price in India " />
+    <meta name="keywords" content="Bangalore Petrol Rate, Pune Petrol Rate, Bangalore Petrol Rate,Delhi,Mumbai,</option>
+    Chennai,Hyderabad,Chandigarh Petrol Prics" />
+    <meta name="author" content="metatags generator">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <title>Latest Fuel Price India</title>
     <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+      <%= stylesheet_link_tag "https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" %>
+      <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"  %>
+      <%= javascript_include_tag  "https://code.getmdl.io/1.3.0/material.min.js" %>
+
+      <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"  %>
+
+
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+		.by {
+    right: 0;
+    bottom: 0;
+    background-color: #ff4742;
+    background: -webkit-linear-gradient(right, #f85032, #ff4742);
+    background: linear-gradient(to left, #f85032, #ff4742);
+    color: #fff;
+    position: fixed;
+    font-weight: 500;
+    z-index: 970000;
+    border-top-left-radius: 0.2em;
+    padding: 0.5em;
+}
+.by:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+.by img {
+    border-radius: 0em !important;
+    width: 2.2em !important;
+    vertical-align: middle !important; 
+}
+.by p {
+    margin: 0 !important;
+    vertical-align: middle !important;
+    display: inline !important;
+    margin-left: 0.5em !important;
+    font-weight: 700 !important;
+}
+
+
+
+        .site-footer  {
+	font-size: 12px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+        button.mdl-button {
+      margin: 50px;
+      font-size: 20px;
+     width: 12em;
+      height: 3em;
+    }
+            /*SELECT ELEMENT WITH UNICODE SYMBOL: DOWN-ARROW (&#x25bc;)*/
+            select#city_name, select#fuelType
+            {
+               width                    : 185pt;
+               height                   : 40pt;
+               line-height              : 40pt;
+               padding-right            : 0pt;
+               text-indent              : 4pt;
+               text-align               : center;
+               vertical-align           : middle;
+               box-shadow               : inset 0 0 3px #606060;
+               border                   : 1px solid #acacac;
+               -moz-border-radius       : 6px;
+               -webkit-border-radius    : 6px;
+               border-radius            : 6px;
+               -webkit-appearance       : none;
+               -moz-appearance          : none;
+               appearance               : none;  /*IMPORTANT*/
+               font-family              : Arial,  Calibri, Tahoma, Verdana;
+               font-size                : 18pt;
+               font-weight              : 500;
+               color                    : #F44336;
+               cursor                   : pointer;
+               outline                  : none;
+            }
+            select#city_name::-ms-expand {display: none;} /*FOR IE*/
+            select#city_name option
+            {
+                padding             : 4px 10px 4px 10px;
+                font-size           : 11pt;
+                font-weight         : normal;
+            }
+            select#city_name option[selected]{ font-weight:bold}
+            select#city_name option:nth-child(even) { background-color:#f5f5f5; }
+            select#city_name:hover {font-weight: 700;}
+            select#city_name:focus {box-shadow: inset 0 0 5px #000099; font-weight: 600;}
+
+            /*LABEL FOR SELECT*/
+            label#lblSelect{ position: relative; display: inline-block;}
+            /*DOWNWARD ARROW (25bc)*/
+            label#lblSelect::after
+            {
+                content                 : "\25bc";
+                position                : absolute;
+                top                     : 0;
+                right                   : 0;
+                bottom                  : 0;
+                width                   : 20pt;
+                line-height             : 40pt;
+                vertical-align          : middle;
+                text-align              : center;
+                background              : #000099;
+                color                   : #fefefe;
+               -moz-border-radius       : 0 6px 6px 0;
+               -webkit-border-radius    : 0 6px 6px 0;
+                border-radius           : 0 6px 6px 0;
+                pointer-events          : none;
+            }
+
+            img
+  {
+    width:100px;
+  }
+
+span
+  {
+  color: #666
+  font-size: 12px
+  display: block
+  position: absolute
+  bottom: 10px
+  position: absolute
+  width: 90%
+  left: 50%
+  top: 45%
+  bottom: auto
+  right: auto
+  transform: translateX(-50%) translateY(-50%)
+  text-align: center
+  }
+
+  .fa
+    {
+    color: #E90606
+    margin: 0 3px
+    font-size: 10px
+    animation: pound .35s infinite alternate
+    -webkit-animation: pound .35s infinite
+  }
+        </style>
+
+        
   </head>
 
   <body>
     <%= yield %>
   </body>
+  <footer> <center>
+<span>
+</span>
+<br>
+<br>
+
+</footer>
 </html>
