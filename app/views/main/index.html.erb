@@ -11,6 +11,7 @@
   <br>
   <h5><p id="result"></h5>
 </center>
+
 <script>
 function fetchVal() {
   $("#result").text("Fetching latest value for you...");
@@ -21,7 +22,8 @@ function fetchVal() {
     type: "GET",
     dataType: "JSON",
     data: jsonData,
-     success: function(data){
+    url: "price?city=" + city + "&fuel_type=" + fuelType,
+    success: function(data){
       if(data[fuelType] == null){
         $("#result").text("Data not available at this time.");
       } else {
