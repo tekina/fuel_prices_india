@@ -1,5 +1,7 @@
 # README
 
+Update 2022: This project is no longer actively maintained.
+
 Get latest fuel prices for major cities in India.
 
 Give it a go at: http://fuelpriceindia.herokuapp.com/
